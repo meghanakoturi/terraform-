@@ -1,0 +1,18 @@
+- **Source:** ./monitoring
+- **Description:** Creates CloudWatch alarms for monitoring EC2 instance metrics.
+- **Input Variables:**
+  - `alarm_name` = "CPUUtilizationAlarm"
+  - `comparison_operator` = "GreaterThanOrEqualToThreshold"
+  - `evaluation_periods` = 2
+  - `metric_name` = "CPUUtilization"
+  - `namespace` = "AWS/EC2"
+  - `period` = 300  
+  - `statistic` = "Average"
+  - `threshold` = 80
+  - `alarm_description` = "Alarm when CPU utilization exceeds 80%"
+  - `instance_id` = module.networking.vpc_id
+  - `sns_topic_name` = "Email_subscription"
+  - `alarm_actions` = module.alerts.sns_topic_arn
+  - `email_address` = "meghanakoturi1113@gmail.com"
+- **Output Variables:**
+  - `sns_topic_arn` = arn:aws:sns:us-east-1:068884545639:Email_subscription:3b1600fb-ba1c-4765-9347-23d5cb9fea19
