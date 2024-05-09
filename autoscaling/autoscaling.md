@@ -1,7 +1,7 @@
 - **Source:** ./autoscaling
 - **Description:** Configures an Auto Scaling Group (ASG) for dynamically scaling EC2 instances based on demand.
 - **Input Variables:**
-  asg_name                = "my-asg"
+ - `asg_name`                = "my-asg"
   max_size                = 3
   min_size                = 1
   desired_capacity        = 1
