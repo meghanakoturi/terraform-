@@ -1,0 +1,13 @@
+- **Source:** ./networking
+- **Description:** Creates a VPC, subnets, internet gateway, and route tables for networking within the AWS infrastructure.
+- **Input Variables:**
+  - `region`: "us-east-1"
+  - `vpc_cidr_block`: "10.0.0.0/16"
+  - `subnet1_cidr_block`, `subnet1_availability_zone`: Configuration for subnet1.
+  - `subnet2_cidr_block`, `subnet2_availability_zone`: Configuration for subnet2.
+  - `igw_name`: Name of the internet gateway.
+- **Output Variables:**
+  - `vpc_id`: ID of the created VPC.
+  - `subnet1_id`, `subnet2_id`: IDs of the created subnets.
+  - `route_table_id`: ID of the created route table.
+  - `internet_gateway_id`: ID of the created internet gateway.
