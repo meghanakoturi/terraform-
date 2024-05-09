@@ -1,39 +1,8 @@
-# Overview of steps
+# main.tf #
+Create a directory for your Terraform project and create a module name EC2 then Terraform configuration file named `main.tf' in that directory. In this file, you define the resource block 
 
-Create a directory for your Terraform project and create a Terraform configuration file (usually named `main.tf`) in that directory. In this file, you define the AWS provider, user data and  resources you want to create. 
+# variables.tf #
+Create an other Terraform configuration file named 'variables.tf' this file is used to declare the variables that you want to accept as input for your Terraform configuration. 
 
-```
-
-## Initialize Terraform**
-
-In your terminal, navigate to the directory containing your Terraform configuration files and run:
-
-```
-terraform init
-```
-
-This command initializes the Terraform working directory, downloading any necessary provider plugins.
-
-## Apply the Configuration
-
-Run the following command to create the AWS resources defined in your Terraform configuration:
-
-```
-terraform apply
-```
-
-Terraform will display a plan of the changes it's going to make. Review the plan and type "yes" when prompted to apply it.
-
-## Verify Resources
-
-After Terraform completes the provisioning process, you can verify the resources created in the AWS Management Console or by using AWS CLI commands.
-
-## Destroy Resources
-
-If you want to remove the resources created by Terraform, you can use the following command:
-
-```
-terraform destroy
-```
-
-Be cautious when using `terraform destroy` as it will delete resources as specified in your Terraform configuration.
+#outputs.tf #
+Create an other Terraform configuration file named 'outputs.tf' this file is used to define the output values that you want to display after Terraform has applied your configuration. These outputs can be useful for providing information to users or other systems after the infrastructure has been provisioned or updated.
