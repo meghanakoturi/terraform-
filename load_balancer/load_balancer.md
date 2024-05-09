@@ -1,0 +1,24 @@
+- **Source:** ./load_balancer
+- **Description:** Sets up an Application Load Balancer (ALB) with target groups for routing traffic to EC2 instances.
+- **Input Variables:**
+  - `vpc_id`: module.networking.vpc_id
+  - `alb_name`: "my-alb"
+  - `alb_internal`                       = false
+  - `alb_type`                           = "application"
+  - `alb_subnets`                       = [module.networking.subnet1_id, module.networking.subnet2_id]
+  - `security_group_id`                  = module.security_group.security_group_id
+  - `target_group_name`                  = "my-target-group"
+  - `target_group_port`                  = 8080
+  - `target_group_protocol`              = "HTTP"
+  - `health_check_interval`              = 30
+  - `health_check_path`                  = "/"
+  - `health_check_port`                  = 8080
+  - `health_check_protocol`              = "HTTP"
+  - `health_check_timeout`               = 5
+  - `health_check_healthy_threshold`     = 5
+  - `health_check_unhealthy_threshold`   = 2
+  - `listener_port`                      = 80
+  - `listener_protocol`                  = "HTTP"
+  
+- **Output Variables:**
+  - `target_group_arn`: arn:aws:elasticloadbalancing:us-east-1:068884545639:targetgroup/my-target-group/81be375e1327bedf
