@@ -1,0 +1,7 @@
+- **Source:** ./security
+- **Description:** Creates a security group to control inbound and outbound traffic for EC2 instances.
+- **Input Variables:**
+  - `vpc_id`: module.networking.vpc_id
+  - `security_group_name`: "MySecurityGroup"
+- **Output Variables:**
+  - `security_group_id`: sg-0e5ac4a5caa753f33
