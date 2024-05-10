@@ -11,3 +11,7 @@ Variables can be of different types (string, number, boolean, etc.), and you can
 
 # outputs.tf #
 Create an other Terraform configuration file named 'outputs.tf' this file is used to define the output values that you want to display after Terraform has applied your configuration. These outputs can be useful for providing information to users or other systems after the infrastructure has been provisioned or updated.
+This file is used to define outputs for your Terraform configuration. Outputs are values that are useful to interact with after Terraform has applied the configuration.
+Common examples of outputs include the IP address of a newly created server, the DNS name of a load balancer, or any other information you might need to reference externally.
+Outputs defined in output.tf can be queried using the Terraform CLI after applying the configuration. This is helpful for retrieving dynamically generated values or information about the infrastructure.
+
