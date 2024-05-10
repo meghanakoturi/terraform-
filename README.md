@@ -1,4 +1,4 @@
-# terraform-
+# terraform-POC
 # Terraform Infrastructure Deployment #
 This Terraform configuration automates the deployment of a basic AWS infrastructure in the us-east-1 region. It includes the creation of a VPC, subnets, security group, EC2 instance running Tomcat, SNS topic, SNS subscription, Application Load Balancer (ALB), Auto Scaling Group, Launch Configuration, CloudWatch alarm, and necessary routing configurations.
 
